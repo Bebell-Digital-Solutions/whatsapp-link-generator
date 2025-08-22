@@ -22,11 +22,17 @@
             --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             --border-color: #e2e8f0;
         }
+
+
+        
         .dark-mode {
             --text: #f7fafc; --text-light: #a0aec0; --bg: #1a202c;
             --card-bg: #2d3748; --shadow: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.2);
             --border-color: #4a5568;
         }
+
+
+        
         html { box-sizing: border-box; overflow-x: hidden; scroll-behavior: smooth; }
         *, *:before, *:after { box-sizing: inherit; margin: 0; padding: 0; }
 
@@ -39,6 +45,7 @@
             color: var(--text);
             transition: background-color 0.3s, color 0.3s;
         }
+        
 
         .container {
             width: 100%;
@@ -124,6 +131,7 @@
             margin: 15px 0;
             font-size: 14px;
             color: var(--secondary);
+            line-height: 1rem;
         }
 
         .instructions h4 {
@@ -138,7 +146,7 @@
             padding: 14px 24px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 600;
             transition: background-color 0.2s;
             display: inline-flex;
@@ -281,9 +289,15 @@
                     <span id="appBrandNameDisplay">Magic Toolbox</span>
                 </div>
                 
-                <div class="top-menu-actions">
-                    <!-- Theme Toggle Icon -->
-                    <div class="fab" id="darkModeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
+	        <div class="top-menu-actions">
+		  
+	
+			<!-- Settings Icon -->
+                <div class="fab" id="settingsBtn" title="Settings"><i class="fas fa-cog"></i></div> 
+                	    <!-- Support Icon -->
+                <div class="fab" id="supportBtn" title="Support" onclick="window.open('https://helpcenter.easygallery.website', '_blank')"><i class="fa fa-info-circle"></i></div>
+			<!-- Theme Toggle Icon -->
+                <div class="fab" id="darkModeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></div>
                 </div>
             </div>
         </div>
@@ -303,7 +317,7 @@
             </div>
             
             <div class="input-group">
-                <label for="message">Message</label>
+                <label for="message">Type your Message here:</label>
                 <textarea id="message" placeholder="Hello! 👋 I'm interested in your services.">Hello! 👋 I'm interested in your services.</textarea>
             </div>
             
@@ -323,12 +337,7 @@
             </div>
         </div>
         
-        
-        
-        
-        
-        
-        
+         
         
         <div class="footer">
             <p>Simple tool to generate WhatsApp URLs with pre-filled messages</p>
